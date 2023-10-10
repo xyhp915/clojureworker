@@ -1,8 +1,3 @@
 name = "test-worker"
-type = 'webpack'
-account_id = ''
-route = ''
-zone_id = ''
-usage_model = ''
-workers_dev = true
-target_type = "webpack"
+main = "target/worker.js"
+compatibility_date = "2023-06-13"

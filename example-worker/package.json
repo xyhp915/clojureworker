@@ -1,4 +1,10 @@
 {
   "name": "test-worker",
-  "main": "target/worker.js"
+  "main": "target/worker.js",
+  "scripts": {
+    "dev": "wrangler dev"
+  },
+  "devDependencies": {
+    "wrangler": "^3.11.0"
+  }
 }

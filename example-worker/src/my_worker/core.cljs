@@ -9,7 +9,7 @@
  (clfl/route "GET" "/test" (fn [req]
                              (js/Promise. (fn [resolv cancel]
                                             (resolv {:body "promise resolved"})))))
-  (clfl/route "GET" "/api/string-as-html" "cool response")
+  (clfl/route "GET" "/api/string-as-html" "<h1>cool response</h1>")
   (clfl/route "GET" "/api/map-as-json" {:hello 1})
   (clfl/route "POST" "/api/ping" #(identity {:body (:body %)
                                                 :headers {}
@@ -20,8 +20,8 @@
 (clfl/worker
  (clfl/route "GET" "/test" (fn [req]
                              (js/Promise. (fn [resolv cancel]
-                                            (resolv {:body "promise resolved"})))))
-  (clfl/route "GET" "/api/string-as-html" "cool response")
+                                            (resolv {:body "😀 promise resolved"})))))
+  (clfl/route "GET" "/api/string-as-html" "<h1>cool response</h1>")
   (clfl/route "GET" "/api/map-as-json" {:hello 1})
   (clfl/route "POST" "/api/ping" #(identity {:body (:body %)
                                                 :headers {}
